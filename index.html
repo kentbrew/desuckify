@@ -1,0 +1,588 @@
+<!doctype html>
+<html>
+<head>
+<title>De-Suckifying Third-Party JavaScript</title>
+<link rel="stylesheet" href="preso.css" type="text/css" media="screen"/>
+</head>
+<body>
+<h1><a target="_tw" href="https://twitter.com/search?q=%23desuckify">#desuckify</a> | <a target="_gh" href="http://kentbrew.github.io/desuckify">http://kentbrew.github.io/desuckify</a> | <a target="_kb" href="http://twitter.com/kentbrew">@kentbrew</a></h1>
+<div id="bd">
+<ol id="main" class="closed">
+<li class="closed">"<i>Hello, SxSW!</i>": {
+  "<b clas>title</b>": "<q>De-Suckifying Third-Party JavaScript</q>",
+  "<b>author</b>": "<q>Kent Brewster</q>",
+  "<b>hashtag</b>": "<q>#desuckify</q>",
+  "<b>on the Twitters</b>": "<q><a target="_vu" href="http://twitter.com/kentbrew">@kentbrew</a></q>",
+  "<b>source</b>": 
+    "<q><a target="_vu" href="http://kentbrew.github.io/desuckify">http://kentbrew.github.io/desuckify</a></q>"
+}</li>
+<li class="closed">"<i>disclaimerama</i>": [
+  "<q>about me</q>",
+  "<q>about my employer</q>",
+  "<q>about the talk</q>"
+]</li>
+<li class="closed">"<i>about me</i>": [
+  "<q>no actual engineering qualifications</q>",
+  "<q>no degree of any sort</q>",
+  "<q>living proof that just about anybody
+    can do this sort of thing</q>"
+]</li>
+<li class="closed">"<i>where I've been</i>": {
+  "<b>Atari</b>": "<q>1977</q>",
+  "<b>WebMD</b>": "<q>1984-2003</q>",
+  "<b>Yahoo</b>": "<q>2004-2009</q>",
+  "<b>Netflix</b>": "<q>2009-2010</q>",
+  "<b>Lexity</b>": "<q>2010-2011</q>",
+  "<b>Pinterest</b>": "<q>current</q>"
+]</li>
+<li class="closed">"<i>a recurring theme in my life</i>":
+   "<q>Rather than building code that runs on our stack, I always seem
+    to wind up building code that has to run on every other 
+    freaking page on the Web.</q>"
+}</li>
+<li class="closed">"<i>about Pinterest</i>": [
+  "<q>what's it like?</q>",
+  "<q>are you hiring?</q>",
+  "<q>dude, where's my API?</q>"
+]</li>
+<li class="closed">"<i>what's it like to work at Pinterest?</i>": { 
+  "<b>answer</b>": "<q>It's a happy, inspiring, creative, friendly place to work 
+    on a happy, inspiring, creative, friendly product. I wake up every 
+    day excited to go to work.</q>",
+  "<b>author</b>": "<q>Tracy Chou</q>",
+  "<b>via</b>": "<q>Quora</q>"
+}</li>
+<li class="closed">"<i>is Pinterest hiring?</i>": { 
+  "<b>answer</b>": "<q>Absolutely!</q>",
+  "<b>jobs</b>": [ 
+    "<q>front end</q>", "<q>back end</q>", "<q>reliability</q>", "<q>android</q>", 
+    "<q>ios</q>", "<q>devops</q>", "<q>security</q>", "<q>data mining</q>", 
+    "<q>compensation manager</q>", "<q>hris manager</q>", "<q>product designer</q>", 
+    "<q>writer</q>", "<q>community managers</q>", "<q>community ops head</q>", 
+    "<q>country managers</q>", "<q>business analyst</q>", "<q>financial analyst</q>",
+    "<q>account manager</q>", "<q>partner ops manager</q>", "<q>awesome people</q>"
+  ],
+  "<b>link</b>": "<a href="http://pinterest.com/about/careers">http://pinterest.com/about/careers</a>"
+}</li>
+<li class="closed">"<i>dude, where's my API?</i>": { 
+  "<b>official</b>": "<q>Pinterest is thinking about the public API very, 
+    very carefully.</q>",
+  "<i>other answers</i>: {
+    "<b>watch this space</b>": "<a href="http://developers.pinterest.com">http://developers.pinterest.com</a>",
+    "<b>build widgets</b>": "<a href="http://business.pinterest.com/widget-builder/">http://business.pinterest.com/widget-builder/</a>",
+    "<b>some stuff already here</b>": "<a href="https://github.com/pinterest/">https://github.com/pinterest/</a>"
+  },
+  "<b>a personal appeal</b>": "<q>Please don't ever ship anything based on an 
+    unsupported API. It will break, and when it does, the people who 
+    didn't release the API will look like jerks.</q>"
+}</li>
+
+<li class="closed">"<i>the talk</i>": {
+  "<b>about</b>": 
+    "<q>Today I will be simultaneously channeling for everyone 
+      whose site I have personally broken in the last sixteen years, while 
+      explaining why and how I did it.</q>",
+  "<b>Is this HTML5?</b>": 
+    "<q>No. This is just barely Web 2.0.</q>"
+}</li>
+<li class="closed"><span class="huge">"<i>how to tell if it's HTML5</i>": [ 
+]</span></li>
+<li class="closed"><span class="huge">"<i>how to tell if it's HTML5</i>": [ 
+  "<q>Try it with Internet Explorer.</q>"
+]</li>
+<li class="closed"><span class="huge">"<i>how to tell if it's HTML5</i>": [ 
+  "<q>Try it with Internet Explorer.</q>",
+  "<q>Did it work?</q>"
+]</span></li>
+<li class="closed"><span class="huge">"<i>how to tell if it's HTML5</i>": [ 
+  "<q>Try it with Internet Explorer.</q>",
+  "<q>Did it work?</q>",
+  "<q>No?</q>"
+]</span></li>
+<li class="closed"><span class="huge">"<i>how to tell if it's HTML5</i>": [ 
+  "<q>Try it with Internet Explorer.</q>",
+  "<q>Did it work?</q>",
+  "<q>No?</q>",
+  "<q>That's HTML5.</q>"
+]</span></li>
+</span>
+<li class="closed">"<i>dire, dire warnings</i>": {
+  "<b>Murphy's Law applies</b>":
+    "<q>anything that can possibly go wrong with third-party JavaScript 
+      will go wrong.</q>",
+  "<b>when will it break?</b>": [
+    "<q>it will break at 3am</q>", 
+    "<q>it will break on IE8</q>", 
+    "<q>it will break in an irreproducible fashion</q>", 
+    "<q>it will take the surrounding page down with it</q>", 
+    "<q>it will cost the site operator hundreds and hundreds of sales</q>"
+  ], 
+  "<b>and, of course</b>":
+    "<q>when it breaks, it will be TOTALLY YOUR FAULT</q>"
+  }
+  </li>
+  <li class="closed">"<span class="huge"><i>therefore</i>":
+  "<q>Anyone who can possibly be 
+  discouraged from shipping 
+  third-party JavaScript should be 
+  discouraged from shipping 
+  third-party JavaScript.</q>"
+  </span></li>
+  <li class="closed">"<i>alternatives to third-party javascript</i>": {
+    "<b>ugh</b>": [
+      "<q><strike>applets</strike></q>",
+      "<q><strike>flash</strike></q>"
+    ], 
+    "<b>yuck</b>": [
+      "<q>iframe</q>"
+    ]
+}</li>
+<li class="closed">"<i>limiting factors</i>": [
+  "<q>Most free popular platforms (tumblr, wordpress, blogger, etc.) 
+    won't allow third-party javascript.</q>",
+  "<q>This is why it's important to have amazing product, marketing,
+    and bizdev people. They can make that happen!</q>"
+]
+</li>
+<li class="closed">"<i>use cases for third-party javascript</i>": {
+  "<b>yes</b>": [
+    "<q>instrumentation</q>",
+    "<q>decorated links</q>"
+  ], "<b>maybe</b>": [
+    "<q>badges</q>",
+    "<q>browser extensions</q>",
+    "<q>toolbar bookmarklets</q>"
+  ], "<b>almost certainly not</b>": [
+    "<q>complex interactions</q>"
+  ]
+}</li>
+<li class="closed">"<i>please don't</i>": [
+  "<q>break the DOM</q>",
+  "<q>create global variables</q>",
+  "<q>hog event listeners</q>",
+  "<q>overwrite my stylesheet</q>"
+  "<q>mess it up on mobile devices</q>",
+  "<q>break my instrumentation</q>",
+  "<q>spy on my users</q>" 
+  ]
+}</li>
+<li class="closed">"<i>avoid avoid avoid</i>": [
+  "<q>alert()</q>",
+  "<q>document.write()</q>",
+  "<q>onerror()</q>",
+  "<q>console.log()</q>",
+  "<q>modal dialogues</q>"
+  "<q>hover-based interactions</q>",
+  "<q>drag and drop</q>"
+]</li>
+<li class="closed">"<i>be very careful with</i>": [
+  "<q>keyboard interactions</q>",
+  "<q>scrolling interactions</q>",
+  "<q>timeouts and intervals</q>",
+  "<q>hover-based interactions</q>"
+]</li>
+<li class="closed">"<i>in the end, there can be only one rule</i>":
+  <span class="huge">"<q>Don't block.</q>"</span>
+</li>
+
+<li class="closed">"<i>about iframes</i>": [
+  "<q>cannot be instrumented</q>",
+  "<q>create their own DOM</q>",
+  "<q>hog the connection pool and cause old browsers to craaaawl</q>",
+  "<q>can easily block window.onload if called inline</q>",
+  "<q>impossible to style</q>",
+  "<q>spy on my readers</q>"
+]</li>
+<li class="closed">"<i>don't hide the ball</i>": [
+  "<q>put the source on github</q>",
+  "<q>encourage site operators to host it themselves if they want</q>",
+  "<q>listen and respond to issues</q>",
+  "<q>merge pull requests</q>",
+  "<q>star, follow, and fork them back</q>",
+  "<q>excellent source for engineering recruitment</q>",
+  "<q>an excellent starting point for your developer page</q>"
+], 
+"<b>pinterest</b>": "<a href="https://github.com/pinterest/widgets">https://github.com/pinterest/widgets</a>"
+</li>
+<li class="closed">"<i>no extra libraries</i>": {
+  "<b>rant</b>": "<q>Do NOT throw a bunch of YUI 
+    or jQuery down on top of my page. If you can't 
+    load all the code you need with a single HTTP 
+    request, you are doing it wrong.</q>"
+}</li>
+<li class="closed">"<i>and especially</i>": {
+  "<b>rant</b>": "<q>If you fail to warn me that you are connecting my site to 
+    Facebook or Google Analytics in any manner whatsoever, I will hunt you 
+    down and kill you like the dog that you are.</q>"
+}</li>
+<li class="closed">"<i>some basics</i>": [ 
+  "<q>dependencies</q>",
+  "<q>portability</q>",
+  "<q>compatibility</q>"
+  "<q>security trouble</q>"
+]</li>
+<li class="closed">"<i>it can't depend on page load</i>": [
+  "<q>no matter how you document it, somebody will screw it up</q>",  
+  "<q>professionals will want to load asynchronously</q>",
+  "<q>some will want to dynamically generate your widget</q>"
+]</li>
+<li class="closed">"<i>it has to work anywhere</i>": [
+  "<q>your customers are not technical people</q>",
+  "<q>often they are using CMSs like Shopify or Wordpress</q>",
+  "<q>or bronze-age things like Yahoo! Stores</q>",
+  "<q>with no idea what HEAD, BODY, or HTML mean</q>",
+  "<q>and even if they do, they might not have access</q>"
+]</li>
+<li class="closed">"<i>it must not break in IE</i>": [
+  "<q>silently fail in older versions</q>",
+  "<q>document what versions are unsupported</q>",
+  "<q>test, with real human users</q>",
+  "<q>you must own Windows XP, Vista, 7, and 8</q>",
+  "<q>you must not even TRY testing on virtual hardware</q>",
+  "<q>be very careful not to let M$ update your test machines</q>"
+]</li>
+<li class="closed">"<i>no surprise updates</i>": {
+  "<b>please</b>": [
+    "<q>version your widget</q>",
+    "<q>communicate your updates</q>",
+    "<q>support everything, forever</q>"
+  ]
+}</li>
+<li class="closed">"<i>implementation</i>": [ 
+  "<q>loader</q>",
+  "<q>configuration</q>",
+  "<q>namespacing</q>"
+]</li>
+<li class="closed">"<i>my HEAD or BODY might not exist.</i>": {
+  "<b>universal solution</b>": [
+    "<q>make your script tag</q>",
+    "<q>find my first script tag</q>",
+    "<q>insert your tag before mine</q>"
+  ]
+}</li>
+
+<li class="closed">"<i>simple async loader</i>": 
+  "<q>(function(d) {
+    var first = d.getElementsByTagName('SCRIPT')[0];
+    var script = d.createElement('SCRIPT');
+    script.async = true;
+    script.type = 'text/javascript';
+    script.charset = 'utf-8';
+    script.src = '//foo.com/widget.js';
+    first.parentNode.insertBefore(script, first);
+  }(document));</q>"
+</li>
+
+<li class="closed">"<i>simple inline loader</i>": 
+  "<q>&lt;script async type="text/javascript" src="//foo.com/widget.js"></q>",
+"<b>notes</b>": {
+  "<i>schemeless src</i>": "<q>prevents security errors</q>",
+  "<i>async</i>": "<q>helps avoid blocking for many browsers</q>",
+  "<i>type</i>": "<q>not needed per spec but eases validation 
+    and may help with funky doctypes and older browsers. Also 
+    important if your widget will be used on government or academic 
+    sites that must follow accessibility or other hard-line validation 
+    procedures.)</q>"
+  }
+</li>
+
+<li class="closed">"<i>global namespace</i>": [
+  "<q>your script gets ONE global variable</q>",
+  "<q>HTML IDs count as global variables</q>",
+  "<q>beware namespace collisions</q>"
+], 
+<b>"uh-oh"</b>: "<q>how are we going to style this thing?</q>"</li>
+
+<li class="closed">"<i>be afraid, be very afraid</i>": [
+  "<q>wrap everything in an anonymous function</q>",
+  "<q>create a random string</q>",
+  "<q>random string is your global namespace root and your HTML ID</q>",
+  "<q>create a stylesheet for that ID only</q>"
+]</li>
+<li class="closed">"<i>warning: not a magic bullet</i>": [
+  "<q>The pattern I'm going to show next will 
+    deliver a certain degree of separation and 
+    safety, so your widget has a fair chance of 
+    appearing the way you want it to look, and almost 
+    certainly won't get unintentionally hosed by 
+    anything else on my page.</q>", 
+  "<q>Key word: UNINTENTIONALLY. If there are bad guys loose 
+    in my DOM who really want to squash my widget, they can. 
+    Of course, now I have two problems....</q>"
+]
+</li>
+<li class="closed">"<i>the goal</i>": [
+  "<q>Simplest possible thing.</q>"
+  "<q>Build a widget that appears on the page wherever 
+    the user inserts a single line of JavaScript.</q>",
+  "<q>Accept configuration requests from outside.</q>",
+  "<q>Don't pollute the global namespace.</q>",
+  "<q>Don't break or be broken by the surrounding CSS.</q>"
+  ]
+}</li>
+<li class="closed">"<i>configuration</i>": {
+  "<b>don't require me to do this</b>":
+    "<q>&lt;script>var config="hello world";&lt;/script></q>",
+  "<b>because</b>": [
+    "<q>I will screw it up.</q>",
+    "<q>Also, 'config' is a global variable.</q>"
+  ]
+}</li>
+<li class="closed">"<i>better</i>": {
+  <q>&lt;script src="//foo.com/widget.js" 
+    <b>data-config="hello world"</b>
+    asyc type="text/javascript">&lt;/script></q>
+}</li>
+<li class="closed">"<i>accessing config</i>": {
+  "<b>theory</b>": [
+    "<q>Set config as a data attribute of your SCRIPT tag.</q>",
+    "<q>At runtime, loop through all SCRIPT tags.</q>",
+    "<q>Look for one whose src attribute matches your target.</q>",
+    "<q>Save the value in data-config, if it exists.</q>",
+    "<q>Delete that SCRIPT node (don't worry; it's already running).</q>",
+    "<q>Fire off your behavior, if any.</q>"
+    "<q>Quit looking.</q>",
+  ], 
+  "<b>bonus</b>":
+    "<q>If the same script tag appears AGAIN in source, 
+      it will find itself and do the right thing.</q>"
+}</li>
+<li class="closed">"<i>my favorite JavaScript pattern</i>": 
+  <q>(function (win, doc, arg) {
+    var $ = win[arg.root] = {
+      'arg': arg, 'doc': doc, 'win': win,
+      'func': (function () {
+        return {
+          init: function () { 
+            alert('my random ID:' + $.arg.root);
+          }
+        };
+      }())
+    }; 
+    $.func.init();     
+  }(window, document, {
+    'root': '_' + new Date().getTime()
+  }));</q>
+</li>
+<li class="closed">"<i>find the right SCRIPT tag</i>": 
+  <q>init: function () {
+    var script = $.doc.getElementsByTagName('SCRIPT'),
+      n = script.length, i;
+    for (i = 0; i < n; i = i + 1) {
+      if (script[i].src.match($.arg.src)) {
+        $.func.structure(script[i]));
+        break;
+      }
+    }
+  }</q>
+  
+  <b>... and pass the right source string down below in $.a.args:</b>
+  
+    }(window, document, {
+    'root': '_' + new Date().getTime(),
+    <q>'src': /widget.js$/</q>
+  }));
+  </q>
+</li>
+<li class="closed">"<i>build structure</i>": 
+  <q>structure: function (script) {
+    $.arg.config = script.getAttribute('data-config');
+    $.struc = {};
+    $.struc.body = $.doc.createElement('DIV');
+    $.struc.body.id = $.arg.root + '_body';
+    var span = $.doc.createElement('SPAN');
+    span.innerHTML = $.arg.config;
+    $.struc.body.appendChild(span);
+    $.struc.x = $.doc.createElement('A');
+    $.struc.x.id = $.arg.root + '_x';
+    $.struc.x.innerHTML = 'x';
+    $.struc.body.appendChild($.struc.x);
+    script.parentNode.insertBefore($.struc.body, script);
+    script.parentNode.removeChild(script);
+    $.func.presentation();
+  }</q>
+</li>
+<li class="closed">"<i>pass the CSS in as $.arg.rules</i>": 
+  }(window, document, {
+  'k': '_' + new Date().getTime(),
+  'src': /widget.js$/,
+  <q>'rules': [ 
+    '#_body { padding: 20px 40px; position: absolute;',
+      'top: 0; right: 0; background: #f00; color: #fff; }',
+    '#_x { position: absolute; top: 2px; right: 10px;', 
+      'color: #ff0; cursor: pointer; }'
+    ]</q>
+  }));
+
+  <b>* CSS lines broken into separate strings 
+    for ease of maintenance and display.</b>
+</q>
+</li>
+<li class="closed">"<i>create your stylesheet</i>": 
+  <q>presentation: function () {
+    var rules = $.arg.rules.join('\n'),
+      css = $.doc.createElement('STYLE');
+    css.type = 'text/css';
+    rules = rules.replace(/#_/g, '#' + $.arg.root + '_');
+    rules = rules.replace(/;/g, '!important;');
+    if (css.styleSheet) {
+      css.styleSheet.cssText = rules;
+    } else {
+      css.appendChild($.doc.createTextNode(rules));
+    }
+    $.doc.head = $.doc.getElementsByTagName('HEAD')[0];
+    $.doc.head.appendChild(css);
+    $.func.behavior();
+  }</q>
+</li>
+<li class="closed">"<i>all done; start behavior</i>": {
+  <q>close: function () {
+    $.struc.body.parentNode.removeChild($.struc.body);
+  },
+  listen: function (el, ev, fn) {
+    if (typeof $.win.addEventListener !== 'undefined') {
+      el.addEventListener(ev, fn, false);
+    } else if (typeof $.win.attachEvent !== 'undefined') {
+      el.attachEvent('on' + ev, fn);
+    }
+  }, 
+  behavior: function () {
+    $.func.listen($.struc.x, 'click', $.func.close);
+  }</q>
+}</li>
+<li class="closed">"<i>important note about listeners</i>": {
+  "<b>for best results</b>": [
+    "<q>Don't add an event listener to every 
+      link you make.</q>",
+    "<q>Instead you should add a single listener to 
+      $.struc.body, find the targets of events, and 
+      send them to appropriate handlers.</q>"
+    "<q>And remember: trying to implement hover-based 
+      interactions will break your heart!</q>"
+  ]
+}</li>
+<li class="closed"><script src="widget.js" data-config="Hello, SxSW!"></script><code><q>(function (w, d, a) {
+  var $ = w[a.k] = {
+    'arg': arg, 'doc': doc, 'win': win, 'struc': {},
+    'func': (function () {
+      return {
+        close: function () {
+          $.struc.body.parentNode.removeChild($.struc.body);
+        },
+        listen: function (el, ev, fn) {
+          if (typeof $.win.addEventListener !== 'undefined') {
+            el.addEventListener(ev, fn, false);
+          } else if (typeof $.win.attachEvent !== 'undefined') {
+            el.attachEvent('on' + ev, fn);
+          }
+        }, 
+        behavior: function () {
+          $.func.listen($.struc.x, 'click', $.func.close);
+        },
+        presentation: function () {
+          var rules = $.arg.rules.join('\n'),
+            css = $.doc.createElement('STYLE');
+          css.type = 'text/css';
+          rules = rules.replace(/#_/g, '#' + $.arg.root + '_');
+          if (css.styleSheet) {
+            css.styleSheet.cssText = rules;
+          } else {
+            css.appendChild($.doc.createTextNode(rules));
+          }
+          $.doc.head.appendChild(css);
+          $.func.behavior();
+        },
+        structure: function (script) {
+          $.arg.config = script.getAttribute('data-config');
+          $.struc.body = $.doc.createElement('DIV');
+          $.struc.body.id = $.arg.root + '_body';
+          var span = $.doc.createElement('SPAN');
+          span.innerHTML = $.arg.config;
+          $.struc.body.appendChild(span);
+          $.struc.x = $.doc.createElement('A');
+          $.struc.x.id = $.arg.root + '_x';
+          $.struc.x.innerHTML = 'x';
+          $.struc.body.appendChild($.struc.x);
+          script.parentNode.insertBefore($.struc.body, script);
+          script.parentNode.removeChild(script);
+          $.func.presentation();
+        },
+        init: function () {
+          $.doc.head = $.doc.getElementsByTagName('HEAD')[0];
+          var script = $.doc.getElementsByTagName('SCRIPT'),
+            n = script.length, i;
+          for (i = 0; i &lt; n; i = i + 1) {
+            if (script[i].src.match($.arg.src)) {
+              $.func.structure(script[i]);
+              break;
+            }
+          }
+        }
+      };
+    }())
+  }; 
+  $.func.init();     
+}(window, document, {
+  'root': '_' + new Date().getTime(),
+  'src': /widget.js$/,
+  'rules': [ 
+    '#_body { padding: 20px 40px; position: absolute; top: 0; right: 0;',
+      'background: #f00; color: #fff; }',
+    '#_x { position: absolute; top: 2px; right: 10px; color: #ff0;',
+      'cursor: pointer; }'
+  ]
+} ));
+</q></code></li>
+
+<li class="closed">"<i>things to try</i>": [
+  "<q>View source; note the SCRIPT tag.</q>",
+  "<q>Inspect the widget; note the SCRIPT tag is gone.</q>",
+  "<q>Close the widget; note that it is gone.</q>",
+]</li>
+
+
+<li class="closed">"<i>a richer example</i>": [
+  "<q>calls a json-p endpoint</q>",
+  "<q>builds inline stylesheets from sass-like objects</q>",
+  "<q>does some fairly complicated rendering</q>"
+], {
+  "<i>remember when you could roll your own twitter timelines?</i>": 
+    "<b>you still can</b>"
+}
+</li>
+
+
+
+<li class="closed"><ul class="tweets" id="canHazTweets"></ul>"<i><a href="http://kentbrew.github.io/twatter">kentbrew.github.io/twatter</a></i>": {
+  "<i>build</i>":
+    "<q><a href="https://twitter.com/settings/widgets/">https://twitter.com/settings/widgets/</a></q>",
+  "<i>hack</i>": 
+    "<q>twitter's HTML fragment</q>",
+  "<i>call</i>": 
+    "<q>&lt;script src="twatter.js"
+      data-structure-id="canHazTweets"
+      data-widget-id="418760697137225728"
+    >&lt;/script></q>" 
+}
+</li>
+
+<li class="closed">"<i>questions?</i>": {
+  "<b>can haz fork?</b>": 
+    "<q><a href="https://github.com/kentbrew/">https://github.com/kentbrew/</a></q>",
+    "<q><a href="https://github.com/pinterest/widgets/">https://github.com/pinterest/widgets/</a></q>",
+  "<b>can haz ping?</b>": {
+    "<i>@kentbrew on</i>": [
+      "<q>twitter</q>", "<q>github</q>","<q>linkedin</q>",
+      "<q>flickr</q>", "<q>pinterest</q>"
+    ]
+  }
+}, "<i>thank you</i>": [
+  "<q>@yahoo</q>", "<q>@netflix</q>", "<q>@pinterest</q>",
+  "<q>@atgmeup</q>", "<q>@panic</q>"
+]</li>
+</ul>
+</div>
+<script type="text/javascript" src="preso.js"></script>
+<script src="twatter.js" data-structure-id="canHazTweets" data-widget-id="418760697137225728"></script>
+</body>
+</html>
