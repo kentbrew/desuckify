@@ -229,8 +229,8 @@
     'ul#_list' : {
       'white-space': 'normal',
       'box-shadow': '0 0 10px #000',
-      'width': '510px',
-      'height': '600px',
+      'width': '400px',
+      'height': '500px',
       'overflow': 'auto',
       'margin': '0',
       'padding': '0',

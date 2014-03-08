@@ -51,6 +51,11 @@ q {
   quotes: none;
 }
 
+u {
+  color: #f00;
+  text-decoration: none;
+}
+
 ol#main {
   text-align: left;
   padding: 0;
