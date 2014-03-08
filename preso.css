@@ -132,6 +132,6 @@ ol#main > li ul.tweets {
 
 ol#main > li.open ul.tweets {
   display: block;
-  right: -550px;
+  right: -440px;
 }
 
